@@ -1,10 +1,65 @@
-body, a {
+body, a, div {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.container-fluid {
-    margin: 20px;
+.right-nav-div {
+    background-color: #f9f9f9;
+    position: fixed;
+    float:right;
+    top:0;
+    bottom: 0;
+    left: 58%;
 }
+
+
+.name-tag {
+    padding:20px;
+    padding-left:40px;
+}
+
+.container-fluid {
+}
+
+.nav-button {
+    font-size:1.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.glyphicon {
+    padding-left:20px;
+}
+
+.nav-text {
+    padding: 30px;
+}
+.nav-button-1:hover {
+    background-color: #DDE8E0;
+}
+
+.nav-button:hover > .nav-text {
+    background-color:rgba(255,255,255,.3);
+}
+
+.nav-button-2:hover {
+    background-color: #749CA8;
+}
+.nav-button-3:hover {
+    background-color: #F9E0A8;
+}
+.nav-button-4:hover {
+    background-color: #D16B54;
+}
+.nav-button-5:hover {
+    background-color: #8B8378;
+}
+
+
+.spacer {
+    padding:20px;
+}
+
 
 .photo {
     margin-top:10px;
