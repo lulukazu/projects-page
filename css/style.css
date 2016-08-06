@@ -2,13 +2,15 @@ body, a, div {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+
+/*navigation related*/
 .right-nav-div {
     background-color: #f9f9f9;
     position: fixed;
     float:right;
     top:0;
     bottom: 0;
-    left: 58%;
+    left: 58.33%;
 }
 
 
@@ -75,4 +77,42 @@ h1 {
 h2 {
     font-size:1.8em;
     color: #9d9d9d;
+}
+
+
+/*content related*/
+
+
+
+#physics {
+    display:block;
+    margin:auto;
+}
+.category-nav-container {
+    overflow:hidden;
+}
+
+.positioning-container {
+    float:right;
+    width:100%;
+}
+
+.category-nav {
+    padding:0px;
+    position: relative;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+}
+
+
+/* The navigation menu links */
+.category-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
 }
