@@ -1,0 +1,11 @@
+{
+"nodes": [
+  { "id":1, "r": 50, "img":"images/cad_objective_crop.gif" },
+  { "id":2, "r": 50,"img":"images/prl_cover_crop.gif" },
+  { "id":3, "r":40 }
+],
+"links": [ {"source": 0, "target": 1},
+  {"source":1,"target":2},
+  {"source":0, "target":2}
+]
+}

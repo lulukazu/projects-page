@@ -95,24 +95,54 @@ h2 {
 .positioning-container {
     float:right;
     width:100%;
+    height:100%;
 }
 
 .category-nav {
-    padding:0px;
     position: relative;
     background-color: #fff; /* Black*/
     overflow-x: hidden;
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s;
+    height:800px;
+}
+
+.glyphicon {
+    padding:0px;
+    padding-top:5px;
+    padding-right:5px;
+    font-size:8px;
+    float:left;
+}
+#nav-box{
+    left:500px;
+}
+
+.nav-item {
+    padding:0px;
+    position: absolute;
 }
 
 
 /* The navigation menu links */
-.category-nav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+.item-header {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
     display: block;
-    transition: 0.3s
+}
+
+.item {
+    padding-top:20px;
+    padding-bottom:30px;
+}
+.item-description {
+    font-size: 14px;
+    color: #749CA8;
+}
+
+#content-svg{
+    position:absolute;
+    width:100%;
+    height:100vh;
 }
