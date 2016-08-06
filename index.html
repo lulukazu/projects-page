@@ -4,12 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CS171 - Project</title>
+	<title>Lulu Liu Project Page</title>
 
     <!-- FONT
  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300' rel='stylesheet' type='text/css'>
 	<!-- CSS libraries -->
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -32,216 +33,26 @@
 <!--</div>-->
 
 <div class="container-fluid" id="main-container">
-<!-- the title slide -->
-	<div id="title-container" class="slide">
-		<div class="title-contents">
-			<div class="title-logo">
-				<div id="logo-icon" aria-hidden="true">
-				<!--<a href="#body">-->
-					<!--<img src="images/Logo.jpg" width="60" height="60" alt="Logo">-->
-				<!--</a>-->
-				</div>
-				<h1 align="center">A discovery of the Cuisines of the World</h1>
-			</div>
-			<p>We scraped three recipe websites to learn about every cuisine in the world.
-				Play with the interactive visualizations below to discover the different cuisines and their particularities.
-			Click anywhere you want and everything will update. Don't be afraid of exploring and Bon Appétit!</p>
-			<a id="explore" class="button button-primary">EXPLORE</a>
-			<a id="explore2" target="_blank" href="https://www.youtube.com/watch?v=p3im5ZoMShc" class="button button-primary">SCREENCAST</a>
-
-		</div>
-	</div>
-</div>
-<div id="nav-anchor"></div>
-<div class="container-fluid" id="navigation-horizontal-bar">
-    <div class="row" id="nav-horizontal-text">
-
-        <div class="col-md-4" id="mini-navigation">
-			<div id="selected-country">
-				<p></p>
-				<div id="selected-country-svg">
-				</div>
-			</div>
-			<div class="btn btn-default map-return-button" id="map-return-button"><span class="glyphicon glyphicon-home"></span>&nbsp; &nbsp;Back to Map</div>
-			<div id="mini-map"></div>
-        </div>
-		<div class="col-md-2 nav-panel" id="ingredient-chart-panel">
-			<div class="mini-plot-text">
-				Which cuisine uses a particular ingredient the most?
-			</div>
-			<div class="row">
-				<img id="ingredient-image2">
-			</div>
-
-			<div class="mini-plot" id="mini-ingredient-chart"></div>
-
-		</div>
-        <div class="col-md-2 nav-panel" id="bar-chart-panel">
-            <div class="mini-plot-text">
-            What ingredients are used in a particular cuisine?
-            </div>
-            <div class="mini-plot" id="mini-barchart">
-
-            </div>
-
-        </div>
-        <div class="col-md-2 nav-panel" id="force-plot-panel">
-            <div class="mini-plot-text">
-                How do recipes and ingredients self-organize?
-            </div>
-
-            <div class="mini-plot" id="mini-forceplot">
-
-            </div>
-        </div>
-        <div class="col-md-2 nav-panel" id="stacked-panel">
-            <div class="mini-plot-text">
-                Are regional recipes representative of food-consumption habits?
-            </div>
-
-            <div class="mini-plot" id="mini-stacked">
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="container2">
-    <section id="Map" class="slide">
-
-            <div class="row">
-                <div id="map-bar" class="col-md-4" align="center"></div>
-
-                <div id="map-map" class=" col-md-8" align="center"></div>
-            </div>
-    </section>
-</div>
-
-<div class="in-between">
-</div>
-
-<h2>Most popular ingredients in each cuisine</h2>
-
-<div class="container-fluid" >
 
 
-<div class="row" id="barcharts">
-	<div class="col-md-5" id="cuisine_chart">
-		<div id="bar-chart"></div>
-	</div>
-	<div class="col-md-1">
-		<img id="ingredient-image">
-	</div>
-	<!--<div class="col-md-5">-->
-
-	<div id="ingredient-chart" class="col-md-5"></div>
-
-
-</div>
-
-
-<row>
-	<div class="col-md-8">
-		<div id="image-chart"></div>
-	</div>
-</row>
-
-</div>
-
-<div class="in-between">
-    </div>
-
-<div id="force-layout-group" style="display: table-row">
-
-
-
-	<div id="force-layout-controls" style="display: table-cell" class="slide">
-		<h2 align="left">Self-Organized Data</h2>
-
-        <div id="force-layout-refresh"><a class="btn btn-default force-button" type="button" onclick="forceplot.wrangleData(forceplot.filters);
-                    forceplot_mini.wrangleData(forceplot_mini.filters);"><span class="glyphicon glyphicon-refresh"></span>  &nbsp;&nbsp;Refresh Data</a>
-        </div>
-
-        <!--Currently Showing:<br>-->
-        <hr>
-
-		<div class="btn-group" data-toggle="buttons">
-			<label class="btn active">
-				<input type="radio" name="graph-type" value="recipe" checked onchange="forceplot.updateVis(); forceplot_mini.updateVis()"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Recipes</span>
-			</label>
-			<label class="btn">
-				<input type="radio" name="graph-type" value="ingredient" onchange="forceplot.updateVis(); forceplot_mini.updateVis()"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Ingredients</span>
-			</label>
-		</div>
-
-        <div id="force-layout-filters">
-            <p></p></div>
-        <a type="button" class="btn btn-default force-button" onclick="forceplot.wrangleData('all');
-                    forceplot_mini.wrangleData('all');
-                	selectedCountryPlot.wrangleData('all');"><span class="glyphicon glyphicon-remove-circle"></span> &nbsp;&nbsp;Clear Filters</a>
-
-
-        <hr>
-	</div>
-    <div id="force-layout" style="display: table-cell"></div>
-
-</div>
-
-<div class="in-between2">
-</div>
-
-<div id="stacked-area-group" >
-    <div class="row">
-	<div id="stacked-area-title" style="..." class="col-md-3">
-		<h2 align="left">Food Supply Quantity as per UN data</h2>
-		<h3 align="left">Detailed annual statistics in grams per capita per day</h3>
-		<hr>
-		<h2 align="center"><span id="country"></span></h2>
-	</div>
-	<div id="all_stacked" class="col-md-6">
-	<div id="stacked-area-chart"></div>
-	<div id="timeline"></div>
-	</div>
-	</div>
-    </div>
-
-<div class="in-between2">
-</div>
-
-<!--<div class="container-fluid" id="stacked area group" >
 	<div class="row">
-		<div class="col-md-6">
-	<h2 align="left">Food Supply Quantity as per UN data</h2>
-	<h3 align="left" >Detailed annual statistics in grams per capita per day</h3>
+		<div class="col-md-3"></div>
+		<div class="col-md-3"></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-4">
+			<div class="col-sm-7">
+				<h1>Lulu Liu</h1>
 
-		</div>
-		<div class="col-md-12">
-
-
-			&lt;!&ndash; Visualization placeholders &ndash;&gt;
-			<div id="stacked-area-chart"></div>
-			<div id="timeline"></div>
-
-		</div>
-	</div>
-
-</div>-->
-
-<!--<div class="container-fluid" >
-	<div class="row">
-		<div class="col-md-12">
-
-			<h2>Average food consumption on each Continent</h2>
-			<h3>The data is given per gram per capita</h3>
-
-			<div class="vis-extra">
-				<svg id="stacked_trial" ></svg>
+				<h2>Physics, Optics, &
+				Instrumentation</h2>
+				<p><a href="files/cv.pdf">[CV]</a></p>
 			</div>
-
+			<div class="col-sm-5">
+			<img src="images/photome.JPG" class="photo">
+			</div>
 		</div>
 	</div>
-</div>-->
+
 
 
 
@@ -266,35 +77,31 @@
 
 <!-- Visualization objects -->
 
-	<script src="js/map.js"></script>
-	<script src="js/main_map.js"></script>
+	<!--<script src="js/map.js"></script>-->
+	<!--<script src="js/main_map.js"></script>-->
 
-<script src="js/main-force.js"></script>
-<script src="js/forceDiagram.js"></script>
-<script src="js/main_barchart.js"></script>
-<script src="js/barchart.js"></script>
-<script src="js/main_barchart2.js"></script>
-<script src="js/barchart2.js"></script>
+<!--<script src="js/main-force.js"></script>-->
+<!--<script src="js/forceDiagram.js"></script>-->
+<!--<script src="js/main_barchart.js"></script>-->
+<!--<script src="js/barchart.js"></script>-->
+<!--<script src="js/main_barchart2.js"></script>-->
+<!--<script src="js/barchart2.js"></script>-->
 
 
 
 <!-- Load dataForceLayout, create visualizations -->
 <!-- Visualization objects -->
-<script src="js/stackedAreaChart.js"></script>
-<script src="js/timeline.js"></script>
+<!--<script src="js/stackedAreaChart.js"></script>-->
+<!--<script src="js/timeline.js"></script>-->
 
-<!--- Decided not to add last viz as it does not fit to the story -->
-<!---<script src="js/Continent.js"></script>
+<!--&lt;!&ndash;- Decided not to add last viz as it does not fit to the story &ndash;&gt;-->
+<!--&lt;!&ndash;-<script src="js/Continent.js"></script>-->
 
-<!-- Load data, create visualizations -->
-<script src="js/main_stacked2.js"></script>
-
-
+<!--&lt;!&ndash; Load data, create visualizations &ndash;&gt;-->
+<!--<script src="js/main_stacked2.js"></script>-->
 
 
+
+</div>
 </body>
 </html>
-
-<!--
-Notes: We need to put something so the user knows what country he clicked (when he clicks, the color changes and stays this way.
-When you click a country appears.-->
