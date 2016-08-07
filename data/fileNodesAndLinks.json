@@ -4,15 +4,38 @@
     "num":1,
     "r": 50,
     "img":"images/cad_objective.png",
-    "text":"The apparatus went through many stages of re-design and re-build.  Each iteration was aimed to improve functionality and reduce noise.  This is the most recent re-design of the objective assembly."
+    "text":"Latest re-design of the objective assembly for the microscopy apparatus.",
+    "link":"files/CAD_Objective_Prism_Assembly.pdf"
   },
   { "id":"optics-2",
     "num":2,
-    "r": 70,
+    "r": 60,
     "img":"images/vincent_PRL_cover.png",
-    "text":"Our most recent PRL publication demonstrated for the first time sub-femtonewton force measurements in fluid.  Measurements were shown to be limited only by fundamental thermal fluctuations, and quantitatively agreed with Mie Theory predictions for optical force. (add press blurb)"
+    "text":"Most recent PRL publication which demonstrated for the first time sub-femtonewton force measurements in fluid. <a href='files/PRL-2016-final-supplemental.pdf' target=new>Supplemental Info</a> | Press Summary",
+    "link":"files/PRL-2016-final-text.pdf"
   },
-  { "id":3, "r":40 }
+  { "id":"optics-3",
+    "num":3,
+    "r": 50,
+    "img":"images/forces_slide.png",
+    "text":"Most recent conference presentation at META 2016 (Malaga, Spain)."  ,
+    "link":"files/Meta2016_invited.pdf"
+  },
+  { "id":"optics-4",
+    "num":4,
+    "r": 60,
+    "img":"images/pnas_significance.png",
+    "text":"2014 PNAS paper on evanescent wave microscopy method with absolute separation data."  ,
+    "link":"files/PNAS-2014-final-text.pdf"},
+
+  { "id":"optics-5",
+    "num":5,
+    "r": 50,
+    "img":"images/casimir.png",
+    "text":"Internal presentation explaining the basics of the theory of Casimir forces.",
+    "link":"files/Casimir_Presentation.pdf"}
+
+
 ],
 
   "astro": [
@@ -23,6 +46,12 @@
       "text":"Deep in the southern night sky are two hazy balls of light.  They are the Large and Small Magellanic Clouds.  "
     },
     { "id":"astro-2",
+      "num":2,
+      "r": 50,
+      "img":"images/telescope.png",
+      "text":"<a id='myBtn'>Test</a> Powerpoint presentation on our statistical method, and the important cosmological questions it helped answer."
+    },
+    { "id":"astro-3",
       "num":2,
       "r": 50,
       "img":"images/telescope.png",

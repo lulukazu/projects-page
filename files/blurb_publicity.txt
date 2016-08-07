@@ -1,0 +1,10 @@
+Title:  New Technique to Measure Tiny Forces in Fluid
+
+
+Text:
+
+One femtonewton is close to the force a dust particle the size of a human cell would feel, illuminated by a ray of sunlight. It is also approximately the viscous drag force experienced by a single bacterium in water. Forces of this magnitude, though outside our macroscopic experience, are highly influential in the microscopic world, facilitating interactions that affect, among other things, cellular function and movement and the shape and structure of DNA.
+
+Existing techniques have covered well force measurements in the piconewton regime, but, in fluid, scientist and engineers have been struggling to go beyond. Force measurements in fluid, however, are extraordinarily important in biological applications. Indeed, a watery environment near room temperature is a pre-requisite for working with living cells and tissue; and fluid-mediated forces are crucial to understand for the design and eventual implementation of micromechanical and microfluidic switches and devices.
+
+In our work, published in Physical Review Letters, we report the first measurement of femtonewton and sub-femtonewton forces in water, with resolution limited only by the fundamental thermal fluctuations of the environment. Our work represents an improvement in sensitivity over previous techniques of approximately two orders of magnitude, and may pave the way for breakthroughs in understanding and engineering the microscopic world.
