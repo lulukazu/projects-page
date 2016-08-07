@@ -11,13 +11,11 @@ body, a, div {
     top:0;
     bottom: 0;
     left: 58.33%;
+    border-left: 2px solid #999;
 }
 
 
-.left-svg-div {
-    background-color: #fff;
-    position: fixed;
-}
+
 
 
 
@@ -43,7 +41,7 @@ body, a, div {
 .nav-text {
     padding: 30px;
 }
-.nav-button-1:hover {
+#nav-button-physics:hover {
     background-color: #DDE8E0;
 }
 
@@ -51,16 +49,16 @@ body, a, div {
     background-color:rgba(255,255,255,.3);
 }
 
-.nav-button-2:hover {
+#nav-button-projects:hover {
     background-color: #749CA8;
 }
-.nav-button-3:hover {
+#nav-button-writing:hover {
     background-color: #F9E0A8;
 }
-.nav-button-4:hover {
+#nav-button-photography:hover {
     background-color: #D16B54;
 }
-.nav-button-5:hover {
+#nav-button-hobbies:hover {
     background-color: #8B8378;
 }
 
@@ -97,6 +95,7 @@ h2 {
 }
 .category-nav-container {
     overflow:hidden;
+    padding-right:0px;
 }
 
 .positioning-container {
@@ -107,12 +106,14 @@ h2 {
 
 .category-nav {
     position: relative;
-    background-color: #fff; /* Black*/
+    background-color: #fff;
     overflow-x: hidden;
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s;
     height:800px;
 }
+
+
 
 .glyphicon {
     padding:0px;
@@ -128,20 +129,30 @@ h2 {
 .nav-item {
     padding:0px;
     position: absolute;
+
+}
+
+#physics-nav{
+
 }
 
 
 /* The navigation menu links */
 .item-header {
     font-size: 18px;
-    color: #749CA8;
     display: block;
+}
+.item-header-physics {
+    color:#B1D0BD;
 }
 
 .item {
     padding-top:20px;
     padding-bottom:30px;
+    padding-right:10px;
 }
+
+
 .item-description {
     font-size: 14px;
     color: #333;
@@ -151,6 +162,7 @@ h2 {
     position:absolute;
     width:100%;
     padding-top:20px;
+    margin-left:20px;
 }
 
 
@@ -172,7 +184,7 @@ h2 {
     width:20px;
     height:20px;
     border-radius:10px;
-    background: #ccc;
+    background: #fff;
     position:relative;
     left:0;
     top:0;
@@ -199,6 +211,13 @@ h2 {
     opacity: .7;
 }
 
+.item-physics:hover {
+    border-right: 4px solid #DDE8E0;
+}
+
+.item-projects {
+    border-right: 4px solid #749CA8;
+}
 
 
 /*MODAL*/
@@ -220,11 +239,10 @@ h2 {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 100px auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
+    width:65%;}
 
 /* The Close Button */
 .close {

@@ -7,10 +7,20 @@ var currentID="physics";
 queue().defer(d3.json,"data/fileNodesAndLinks.json")
     .await(createVis);
 
+var colors={ "physics":'#DDE8E0',
+    "projects":'#749CA8',
+    "writing":'#F9E0A8',
+    "photography":'#D16B54',
+    "hobbies":'#8B8378'};
 
+var colors_arr=['#DDE8E0', '#749CA8', '#F9E0A8', '#D16B54', '#8B8378','#DDE8E0', '#749CA8', '#F9E0A8', '#D16B54', '#8B8378'];
 
 function updateNav(id){
     closeNav();
+    document.getElementById("nav-button-"+currentID).style['background-color']="";
+    document.getElementById("nav-text-"+currentID).style['background-color']="";
+    document.getElementById("nav-button-"+id).style['background-color']=colors[id];
+    document.getElementById("nav-text-"+id).style['background-color']="rgba(255,255,255,.3)";
     setTimeout(function(){
         displayUpdate(id);
     },300);
@@ -29,6 +39,7 @@ function openNav() {
 }
 
 function closeNav() {
+
     document.getElementById("nav-box").style.left = "500px";
 }
 
@@ -40,7 +51,6 @@ function createVis(error,data1) {
 }
 
 function wrangleData(itemID){
-    console.log(allData)
     updateFiles("content-div",allData,itemID);
 }
 
@@ -51,16 +61,24 @@ function updateFiles(parentID,data,itemID) {
     lastDisp=.8;
     //link data
     var parentEl=d3.select("#"+parentID);
+
+
     var nodes = parentEl.selectAll(".node")
         .data(data[itemID],function(d){return d.id;});
 
     //exit
-    nodes.exit().remove();
+    nodes.exit()
+        .style("opacity", 0).remove();
+
+
 
     //enter
-    var divs=nodes.enter().append("div")
-        .attr("class","node row")
-        .attr("style",function(d){
+    var divs=nodes.enter()
+        .append("div")
+        .attr("class","node row");
+
+
+    divs.attr("style",function(d){
             var randRange=80;
             var leftDisp=Math.random();
             while (Math.abs(lastDisp-leftDisp)<0.4){
@@ -68,16 +86,24 @@ function updateFiles(parentID,data,itemID) {
             }
             lastDisp=leftDisp;
 
-            return "left:"+leftDisp*randRange+"px; top:"+d.num*40+"px;";
-        });
+            //return "left:"+leftDisp*randRange+"px; top:-1000px; display: hidden;";
+            return "left:50px; top:-400px; display: hidden;";
+        })
+        .transition()
+        .duration(1000)
+        .attr("style",function(d){
+                return "left:50px; top:"+d.num*40+"px; display: inline-flex;";
+            })
+;
 
-    var links=divs.append("a")
-        .attr("href",function(d){return d.link;})
-        .attr("target","new");
+    //window.open('page.html','_newtab')
 
-    links.append("div")
+    divs.append("div")
         .attr("class","dot")
-        .on("mouseover",function(d){
+        .style("border",function(d,i){
+            return "2px solid "+colors_arr[i];
+        })
+        .on("mouseover",function(d,i){
             var w= d.r*2;
             var h= d.r*2;
             var w2=w*1.2;
@@ -94,25 +120,40 @@ function updateFiles(parentID,data,itemID) {
                 .style("width", w+"px")
                 .style("height",w+"px")
                 .style("border-radius", d.r+"px")
+                .style("border","")
                 .style("left","-"+t1+"px")
                 .style("top","-"+t1+"px");
 
         })
-        .on("mouseout",function(d){
+        .on("mouseout",function(d,i){
             var w= d.r*2;
             var h= d.r*2;
 
             var t1= d.r/2;
-
+            var colorhere=colors_arr[i];
             d3.select(this)
                 .transition()
                 .duration(300)
-                .style("background", "#ccc")
+                .style("background", colorhere)
                 .style("width", "20px")
                 .style("height","20px")
                 .style("border-radius","10px")
                 .style("left","0px")
                 .style("top","0px");
+        })
+        .on("click",function(d){
+            switch (d.type) {
+                case "file":
+                    window.open(d.link, '_newtab');
+                    break;
+                case "video":
+                    var src = d.link;
+                    modal.style.display = "block";
+                    modal.style.width='auto';
+                    modal.style.height='auto';
+                    $('#myModal iframe').attr('src', src);
+            }
+
         });
 
 
@@ -126,27 +167,27 @@ function updateFiles(parentID,data,itemID) {
         .html(function(d){
             return d.text;
         })
-        .attr("class","node-text col-sm-7")
+        .attr("class","node-text col-sm-7");
 
 
 
     //modal javascript
 
-    var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+
 
 // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
+    var modal = document.getElementById('myModal');
+//
 // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    };
+//    btn.onclick = function() {
+//
+//    };
 
 // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
+        $('#myModal iframe').removeAttr('src')
         modal.style.display = "none";
     };
 

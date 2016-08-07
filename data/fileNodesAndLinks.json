@@ -5,35 +5,42 @@
     "r": 50,
     "img":"images/cad_objective.png",
     "text":"Latest re-design of the objective assembly for the microscopy apparatus.",
-    "link":"files/CAD_Objective_Prism_Assembly.pdf"
+    "link":"files/CAD_Objective_Prism_Assembly.pdf",
+    "type":"file"
   },
   { "id":"optics-2",
     "num":2,
     "r": 60,
     "img":"images/vincent_PRL_cover.png",
     "text":"Most recent PRL publication which demonstrated for the first time sub-femtonewton force measurements in fluid. <a href='files/PRL-2016-final-supplemental.pdf' target=new>Supplemental Info</a> | Press Summary",
-    "link":"files/PRL-2016-final-text.pdf"
+    "link":"files/PRL-2016-final-text.pdf",
+    "type":"file"
   },
   { "id":"optics-3",
     "num":3,
     "r": 50,
     "img":"images/forces_slide.png",
     "text":"Most recent conference presentation at META 2016 (Malaga, Spain)."  ,
-    "link":"files/Meta2016_invited.pdf"
+    "link":"files/Meta2016_invited.pdf",
+    "type":"file"
   },
   { "id":"optics-4",
     "num":4,
     "r": 60,
     "img":"images/pnas_significance.png",
     "text":"2014 PNAS paper on evanescent wave microscopy method with absolute separation data."  ,
-    "link":"files/PNAS-2014-final-text.pdf"},
+    "link":"files/PNAS-2014-final-text.pdf",
+    "type":"file"
+  },
 
   { "id":"optics-5",
     "num":5,
     "r": 50,
     "img":"images/casimir.png",
     "text":"Internal presentation explaining the basics of the theory of Casimir forces.",
-    "link":"files/Casimir_Presentation.pdf"}
+    "link":"files/Casimir_Presentation.pdf",
+    "type":"file"
+  }
 
 
 ],
@@ -41,21 +48,27 @@
   "astro": [
     { "id":"astro-1",
       "num":1,
-      "r": 70,
+      "r": 60,
       "img":"images/magellanic_cloud.png",
-      "text":"Deep in the southern night sky are two hazy balls of light.  They are the Large and Small Magellanic Clouds.  "
+      "text":"Deep in the southern night sky are two hazy balls of light.  They are the Large and Small Magellanic Clouds: dwarf galaxies residing within the dark matter halo of our own Milky Way. Their presence has been a source of mystery to cosmologists, as LCDM cosmological models predict that in the larger universe they should be very rare...",
+      "link":"http://www.youtube.com/v/gjjWcWFOiuU&amp;autoplay=1",
+      "type":"video"
     },
     { "id":"astro-2",
       "num":2,
       "r": 50,
-      "img":"images/telescope.png",
-      "text":"<a id='myBtn'>Test</a> Powerpoint presentation on our statistical method, and the important cosmological questions it helped answer."
+      "img":"images/galaxies.png",
+      "text":"Powerpoint presentation on our statistical method, and the important cosmological questions it helped answer.",
+      "link":"files/stanford_presentation.pdf",
+      "type": "file"
     },
     { "id":"astro-3",
-      "num":2,
-      "r": 50,
+      "num":3,
+      "r": 60,
       "img":"images/telescope.png",
-      "text":"Powerpoint presentation on our statistical method, and the important cosmological questions it helped answer."
+      "text":"ApJ paper on our method of counting dwarf galaxies in the Sloan Digital Sky Survey with inadequate red-shift information.",
+      "type": "file",
+      "link":"files/APJ_2011.pdf"
     }
   ]
 }

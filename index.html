@@ -42,27 +42,27 @@
 					<div class="category-nav" id="nav-box">
 						<div class="nav-item" id="physics-nav">
 							<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
-							<div class="item" onclick="wrangleData('optics')">
+							<div class="item item-physics " onclick="wrangleData('optics')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
-								<span class="item-header">How can we measure sub-femtonewton optical forces?</span>
+								<span class="item-header item-header-physics">How can we measure sub-femtonewton optical forces?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisci</p>
 							</div>
-							<div class="item" onclick="wrangleData('astro')">
+							<div class="item item-physics" onclick="wrangleData('astro')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
-								<span class="item-header">How common are the Magellanic Clouds?</span>
+								<span class="item-header item-header-physics">How common are the Magellanic Clouds?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac nisi ex. Sed lobortis tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed scelerisque dui, sed luctus mi. Integer viverra orci a pretium mollis. Nullam vel </p>
 							</div>
-							<div class="item">
+							<div class="item item-physics">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
-								<span class="item-header">How can we track extra-solar planets?</span>
+								<span class="item-header item-header-physics">How can we track extra-solar planets?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac ni</p>
 							</div>
-							<div class="item">
+							<div class="item item-physics">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
-								<span class="item-header">Are gravitational waves real?</span>
+								<span class="item-header item-header-physics">Are gravitational waves real?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus</p>
 							</div>
 						</div>
@@ -100,29 +100,29 @@
 			<div class="spacer row">
 
 			</div>
-			<div class="row nav-button-1 nav-button">
+			<div class="row nav-button" id="nav-button-physics" onclick="updateNav('physics')">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text" onclick="updateNav('physics')">Physics</div>
-				<div class="col-sm-4"></div>
-			</div>
-			<div class="row nav-button-2 nav-button">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text" onclick="updateNav('projects')">Projects</div>
+				<div class="col-sm-4 nav-text" id="nav-text-physics">Physics</div>
 				<div class="col-sm-4"></div>
 			</div>
-			<div class="row nav-button-3 nav-button">
+			<div class="row nav-button" id="nav-button-projects" onclick="updateNav('projects')">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text">Writing </div>
-				<div class="col-sm-4"></div>
-			</div>
-			<div class="row nav-button-4 nav-button">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text">Photography</div>
+				<div class="col-sm-4 nav-text" id="nav-text-projects">Projects</div>
 				<div class="col-sm-4"></div>
 			</div>
-			<div class="row nav-button-5 nav-button">
+			<div class="row nav-button" id="nav-button-writing">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text">Hobbies</div>
+				<div class="col-sm-4 nav-text" id="nav-text-writing">Writing </div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row nav-button" id="nav-button-photography">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 nav-text" id="nav-text-photography">Photography</div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row nav-button" id="nav-button-hobbies">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 nav-text" id="nav-text-hobbies">Hobbies</div>
 				<div class="col-sm-4"></div>
 			</div>
 
@@ -140,7 +140,8 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">x</span>
-			<p>Some text in the Modal..</p>
+			<iframe width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+
 		</div>
 
 	</div>
