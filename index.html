@@ -36,21 +36,21 @@
 
 
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-7 left-svg-div">
 			<div class="row">
 				<div class="col-md-8">
-					<svg id="content-svg"></svg>
+					<div id="content-div"></div>
 				</div>
 				<div class="col-md-4 category-nav-container">
 					<div class="category-nav" id="nav-box">
 						<div class="nav-item" id="physics-nav">
 							<!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
-							<div class="item">
+							<div class="item" onclick="wrangleData('optics')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 								<span class="item-header">How can we measure sub-femtonewton optical forces?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisci</p>
 							</div>
-							<div class="item">
+							<div class="item" onclick="wrangleData('astro')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
 								<span class="item-header">How common are the Magellanic Clouds?</span>
