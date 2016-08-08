@@ -53,25 +53,39 @@
 								<span class="item-header item-header-physics">How common are the Magellanic Clouds?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac nisi ex. Sed lobortis tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed scelerisque dui, sed luctus mi. Integer viverra orci a pretium mollis. Nullam vel </p>
 							</div>
-							<div class="item item-physics">
+							<div class="item item-physics" onclick="wrangleData('tess')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
-								<span class="item-header item-header-physics">How can we track extra-solar planets?</span>
+								<span class="item-header item-header-physics">What goes into the design of a space mission?</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac ni</p>
 							</div>
-							<div class="item item-physics">
+							<div class="item item-physics" onclick="wrangleData('otherphysics')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
-								<span class="item-header item-header-physics">Are gravitational waves real?</span>
+								<span class="item-header item-header-physics">Other physics papers and reports</span>
 								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus</p>
 							</div>
 						</div>
+
+
 						<div class="nav-item" id="projects-nav" style="display:none;">
-							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-							<a href="#">First</a>
-							<a href="#">Second</a>
-							<a href="#">Thidddd</a>
-							<a href="#">Fourth</a>
+							<div class="item item-projects " onclick="wrangleData('bench')">
+								<div class="glyphicon glyphicon-triangle-right"></div>
+								<span class="item-header item-header-projects">Virtual Optics Bench</span>
+								<p class="item-description">A Matlab tool with a graphical user interface which simulates an optical bench top.  User may place and remove optical elements and simulate their effects on a coherent gaussian beam.</p>
+							</div>
+							<div class="item item-projects" onclick="wrangleData('recipes')">
+								<div class="glyphicon glyphicon-triangle-right"></div>
+
+								<span class="item-header item-header-projects">Self-Organizing Recipe Data</span>
+								<p class="item-description">A data visualization project exploring the cuisines of the world: how they relate to each other and which ingredients are most often used together.</p>
+							</div>
+							<div class="item item-projects" onclick="wrangleData('tess')">
+								<div class="glyphicon glyphicon-triangle-right"></div>
+
+								<span class="item-header item-header-projects">More to come!</span>
+								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac ni</p>
+							</div>
 						</div>
 					</div>
 
@@ -112,17 +126,17 @@
 			</div>
 			<div class="row nav-button" id="nav-button-writing">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text" id="nav-text-writing">Writing </div>
+				<div class="col-sm-4 nav-text" id="nav-text-writing">Writing <div class="glyphicon glyphicon-temp glyphicon-wrench"></div></div>
 				<div class="col-sm-4"></div>
 			</div>
 			<div class="row nav-button" id="nav-button-photography">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text" id="nav-text-photography">Photography</div>
+				<div class="col-sm-4 nav-text" id="nav-text-photography">Photos <div class="glyphicon glyphicon-temp glyphicon-wrench"></div></div>
 				<div class="col-sm-4"></div>
 			</div>
 			<div class="row nav-button" id="nav-button-hobbies">
 				<div class="col-sm-4"></div>
-				<div class="col-sm-4 nav-text" id="nav-text-hobbies">Hobbies</div>
+				<div class="col-sm-4 nav-text" id="nav-text-hobbies">Hobbies <div class="glyphicon glyphicon-temp glyphicon-wrench"></div></div>
 				<div class="col-sm-4"></div>
 			</div>
 
@@ -140,7 +154,17 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 			<span class="close">x</span>
-			<iframe width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+			<div class="row">
+				<div class="col-md-8">
+					<iframe width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+				<div class="col-md-4">
+					<p id="video-text"></p>
+				</div>
+
+			</div>
+			</div>
+
 
 		</div>
 

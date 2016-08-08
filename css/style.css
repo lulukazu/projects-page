@@ -108,9 +108,9 @@ h2 {
     position: relative;
     background-color: #fff;
     overflow-x: hidden;
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s;
-    height:800px;
+    height:750px;
 }
 
 
@@ -122,6 +122,11 @@ h2 {
     font-size:9px;
     float:left;
 }
+
+.glyphicon-temp {
+    font-size:12px;
+}
+
 #nav-box{
     left:500px;
 }
@@ -144,6 +149,10 @@ h2 {
 }
 .item-header-physics {
     color:#B1D0BD;
+}
+
+.item-header-projects {
+    color:#749CA8;
 }
 
 .item {
@@ -215,9 +224,11 @@ h2 {
     border-right: 4px solid #DDE8E0;
 }
 
-.item-projects {
+.item-projects:hover {
     border-right: 4px solid #749CA8;
 }
+
+
 
 
 /*MODAL*/
@@ -257,4 +268,9 @@ h2 {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#video-text{
+    background-color: rgba(255,255,255,.7);
+    padding:10px;
 }

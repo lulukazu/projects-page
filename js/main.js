@@ -148,10 +148,12 @@ function updateFiles(parentID,data,itemID) {
                     break;
                 case "video":
                     var src = d.link;
+                    var text= d.videotext;
                     modal.style.display = "block";
                     modal.style.width='auto';
                     modal.style.height='auto';
                     $('#myModal iframe').attr('src', src);
+                    $('#myModal p').html(text);
             }
 
         });

@@ -28,7 +28,7 @@
     "num":4,
     "r": 60,
     "img":"images/pnas_significance.png",
-    "text":"2014 PNAS paper on evanescent wave microscopy method with absolute separation data."  ,
+    "text":"2014 PNAS paper on evanescent wave microscopy method with absolute separation measurement capabilities in the single nanometer range."  ,
     "link":"files/PNAS-2014-final-text.pdf",
     "type":"file"
   },
@@ -51,7 +51,7 @@
       "r": 60,
       "img":"images/magellanic_cloud.png",
       "text":"Deep in the southern night sky are two hazy balls of light.  They are the Large and Small Magellanic Clouds: dwarf galaxies residing within the dark matter halo of our own Milky Way. Their presence has been a source of mystery to cosmologists, as LCDM cosmological models predict that in the larger universe they should be very rare...",
-      "link":"http://www.youtube.com/v/gjjWcWFOiuU&amp;autoplay=1",
+      "link":"http://www.youtube.com/v/gjjWcWFOiuU&amp;autoplay=1&amp;rel=0;",
       "type":"video"
     },
     { "id":"astro-2",
@@ -69,6 +69,150 @@
       "text":"ApJ paper on our method of counting dwarf galaxies in the Sloan Digital Sky Survey with inadequate red-shift information.",
       "type": "file",
       "link":"files/APJ_2011.pdf"
+    }
+  ],
+
+
+  "tess": [
+    { "id":"tess-1",
+      "num":1,
+      "r": 50,
+      "img":"images/planets.png",
+      "text":"The planet-finder satellite will search for planetary transits of stars in the local galaxy.  It is an all-sky mission that aims to simultaneously monitor more than 500,000 stars.  It is scheduled for launch 2017. [Mission plan video which I did not make]",
+      "link":"http://www.youtube.com/v/mpViVEO-ymc&amp;autoplay=1&amp;rel=0;",
+      "type":"video"
+    },
+    { "id":"tess-2",
+      "num":2,
+      "r": 60,
+      "img":"images/senior_thesis.png",
+      "text":"My senior thesis at MIT was on testing and improving the photometric precision of the onboard CCD cameras.  The mission spec at the time was 150 parts-per-million sensitivity which I was able to achieve.",
+      "link":"files/TESS_Photometric_Precision.pdf",
+      "type": "file"
+    },
+    { "id":"tess-3",
+      "num":3,
+      "r": 60,
+      "img":"images/skymap_2.png",
+      "text":"Example of an early STK simulation designing and testing optimal sky coverage strategies for the 2-year mission.",
+      "type": "video",
+      "link":"http://www.youtube.com/v/BxTvI-xHXsg&amp;autoplay=1&amp;rel=0;"
+    },
+    { "id":"tess-4",
+      "num":4,
+      "r": 50,
+      "img":"images/skymap_3.png",
+      "text":"White paper describing the first observational plan for the telescope mission.  Includes coverage studies and optimization.",
+      "link":"files/TESS_ObservationPlan.pdf",
+      "type": "file"
+    },
+    { "id":"tess-5",
+      "num":5,
+      "r": 50,
+      "img":"images/acs.png",
+      "text":"Brief white paper calculating required specs on the reaction wheel assembly of the attitude control system based on spacecraft parameters.",
+      "link":"files/TESS_ACS_analysis.pdf",
+      "type": "file"
+    }
+  ],
+
+  "otherphysics": [
+    { "id":"otherphysics-1",
+      "num":1,
+      "r": 50,
+      "img":"images/lenz.png",
+      "text":"A dynamical symmetry of the hydrogen atom can be used to derive its energy levels in an unusual way. [8.06 (QM) term paper]",
+      "link":"files/806paper.pdf",
+      "type":"file"
+    },
+    { "id":"otherphysics-2",
+      "num":2,
+      "r": 50,
+      "img":"images/xray.png",
+      "text":"Small experiments in x-ray physics: bremsstrahlung radiation, electron-positron annihilation, characteristic lines of elements, compton scattering, and X-ray attenuation. [8.13 Lab]",
+      "link":"files/lululiu_xrays.pdf",
+      "type": "file"
+    },
+    { "id":"otherphysics-3",
+      "num":3,
+      "r": 60,
+      "img":"images/zeeman.png",
+      "text":"Zeeman splitting effect and hyperfine structure, as measured by undergraduates. [8.14 Lab]",
+      "type": "file",
+      "link":"files/lululiu_zeeman.pdf"
+    },
+    { "id":"otherphysics-4",
+      "num":4,
+      "r": 50,
+      "img":"images/xrays.jpg",
+      "text":"Superconductivity and Josephson current experiment.  Measurement of critical temperatures, Meissner effect, high Tc superconductors. [8.14 Lab]",
+      "link":"files/lululiu_superconductivity.pdf",
+      "type": "file"
+    },
+    { "id":"otherphysics-5",
+      "num":5,
+      "r": 60,
+      "img":"images/telescope.jpg",
+      "text":"Using the 21-cm hydrogen line from gas clouds in deep space, we measure the rotation curve of the Milky Way galaxy. Its shape implies the existence of dark matter.[8.14 Lab]",
+      "link":"files/lululiu_21cm.pdf",
+      "type": "file"
+    }
+  ],
+
+  "bench": [
+    { "id":"bench-1",
+      "num":1,
+      "r": 60,
+      "img":"images/bench.png",
+      "text":"Screenshot of the virtual optics bench GUI.  Pictured is a LG bessel beam with orbital momentum generated by a combined axicon and spiral phase plate.",
+      "link":"files/806paper.pdf",
+      "type":"page"
+    },
+    { "id":"bench-2",
+      "num":2,
+      "r": 50,
+      "img":"images/bench_download.png",
+      "text":"Download the .zip file.  To run tool, run Optics_UI.m in Matlab.",
+      "link":"files/optics_UI.zip",
+      "type": "file"
+    },
+    { "id":"bench-3",
+      "num":3,
+      "r": 50,
+      "img":"images/vob_gaussian.png",
+      "text":"Example video showing a simple gaussian beam going through a focus.",
+      "type": "video",
+      "link":"http://www.youtube.com/v/Bal-z5KUEPU&amp;autoplay=1&amp;rel=0;",
+      "videotext":"<p>Simulated Gaussian Beam going through a focus.  Plotted using Virtual Optics Bench V2.0</p><p>Paraxial approximation</p>"
+    },
+
+    { "id":"bench-4",
+      "num":4,
+      "r": 50,
+      "img":"images/vob_fractional.png",
+      "text":"A gaussian beam which has passed through a spiral phase plate acquires a topological charge and therefore orbital angular momentum.  The phase singularity at the center of the beam shows up as a dark spot which expands with increasing charge.",
+      "link":"http://www.youtube.com/v/ilgKjIh5n0k&amp;autoplay=1&amp;rel=0;",
+      "type": "video",
+      "videotext":"<p>A gaussian beam which has passed through a spiral phase plate acquires a topological charge and therefore orbital angular momentum.  The phase singularity at the center of the beam shows up as a dark spot which expands with increasing charge.</p><p>If the charge is not an integer per 2-pi phase accumulation, fractional charge effects manifest.  Fractional charge L-G beams are not self-similar solutions to the paraxial wave equation and can be decomposed into overlapping integer charge beams propagating in different directions.</p><p>Video shows simulated Laguerre-Gaussian beam with topological charge slowly evolving from 0-4 going through fractional charge regimes.</p>"
+    }
+  ],
+
+  "recipes": [
+    { "id":"recipes-1",
+      "num":1,
+      "r": 60,
+      "img":"images/world.png",
+      "text":"Read the documentation for an introduction to the self-organizing data web app.  Data was scraped from 3 different recipe websites and contains individual recipes along with each of their ingredients.",
+      "link":"files/recipes_doc.pdf",
+      "type":"page"
+    },
+    { "id":"recipes-2",
+      "num":2,
+      "r": 50,
+      "img":"images/recipe_dots.png",
+      "text":"Visit a working version of the tool.",
+      "link":"files/optics_UI.zip",
+      "type": "file"
     }
   ]
 }
