@@ -204,7 +204,7 @@
       "img":"images/world.png",
       "text":"Read the documentation for an introduction to the self-organizing data web app.  Data was scraped from 3 different recipe websites and contains individual recipes along with each of their ingredients.",
       "link":"files/recipes_doc.pdf",
-      "type":"page"
+      "type":"file"
     },
     { "id":"recipes-2",
       "num":2,
