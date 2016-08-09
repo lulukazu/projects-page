@@ -17,7 +17,7 @@
 
 	<!-- Custom CSS code -->
 	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
 	<div class="row">
 		<div class="col-md-7 left-svg-div">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8" id="content-div-parent">
 					<div id="content-div"></div>
 				</div>
 				<div class="col-md-4 category-nav-container">
@@ -45,25 +45,25 @@
 							<div class="item item-physics " onclick="wrangleData('optics')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 								<span class="item-header item-header-physics">How can we measure sub-femtonewton optical forces?</span>
-								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisci</p>
+								<p class="item-description">An optically tweezed free-floating microsphere is able to sense extremely small forces in fluid, with sensitivity limited only by fundamental thermal fluctuations.</p>
 							</div>
 							<div class="item item-physics" onclick="wrangleData('astro')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
 								<span class="item-header item-header-physics">How common are the Magellanic Clouds?</span>
-								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac nisi ex. Sed lobortis tincidunt volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sed scelerisque dui, sed luctus mi. Integer viverra orci a pretium mollis. Nullam vel </p>
+								<p class="item-description">The sloan digital sky survey is the largest database of galactic objects ever created, making the actual universe ripe for statistical study.  However, line-of-sight distance is measured only with redshift, which is unavailable for most objects in the database.</p>
 							</div>
 							<div class="item item-physics" onclick="wrangleData('tess')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
 								<span class="item-header item-header-physics">What goes into the design of a space mission?</span>
-								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus neque. Donec ac ni</p>
+								<p class="item-description">I joined the science team of the Transiting Exoplanet Survey Satellite early in the mission design stages.  </p>
 							</div>
 							<div class="item item-physics" onclick="wrangleData('otherphysics')">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
 								<span class="item-header item-header-physics">Other physics papers and reports</span>
-								<p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut cursus</p>
+								<p class="item-description">Some selected physics term papers and lab projects from my time at MIT.</p>
 							</div>
 						</div>
 
@@ -80,7 +80,7 @@
 								<span class="item-header item-header-projects">Self-Organizing Recipe Data</span>
 								<p class="item-description">A data visualization project exploring the cuisines of the world: how they relate to each other and which ingredients are most often used together.</p>
 							</div>
-							<div class="item item-projects" onclick="wrangleData('tess')">
+							<div class="item item-projects" onclick="">
 								<div class="glyphicon glyphicon-triangle-right"></div>
 
 								<span class="item-header item-header-projects">More to come!</span>
@@ -105,7 +105,7 @@
 
 					<h2>Physics, Optics, &
 					Instrumentation</h2>
-					<p><a href="files/cv.pdf">[CV]</a></p>
+					<p><a href="files/cv.pdf" target="new">[CV]</a></p>
 				</div>
 				<div class="col-sm-5">
 				<img src="images/photome.JPG" class="photo">
@@ -149,24 +149,89 @@
 
 
 	<!-- The Modal -->
-	<div id="myModal" class="modal">
+		<div id="myModal" class="modal">
 
 		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">x</span>
-			<div class="row">
-				<div class="col-md-8">
-					<iframe width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+				<div class="modal-content">
+					<span class="close" id="span1">x</span>
+					<div class="row">
+						<div class="col-md-8">
+							<iframe width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+						</div>
+					<div class="col-md-4">
+						<p id="video-text"></p>
+					</div>
+
 				</div>
-				<div class="col-md-4">
-					<p id="video-text"></p>
 				</div>
 
-			</div>
-			</div>
 
 
 		</div>
+
+	<div id="pageModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close" id="span3">x</span>
+			<div class="row" id="modal-container">
+
+
+			</div>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+	<div id="forceModal" class="modal">
+
+		<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close" id="span2">x</span>
+				<div id="force-layout-group" style="display: table-row">
+
+
+
+					<div id="force-layout-controls" style="display: table-cell" class="slide">
+						<h3 align="left">Self-Organized Data</h3>
+
+						<div id="force-layout-refresh"><a class="btn btn-default force-button" type="button" onclick="forceplot.wrangleData(forceplot.filters);"><span class="glyphicon glyphicon-refresh"></span>  &nbsp;&nbsp;Refresh Data</a>
+						</div>
+
+						<!--Currently Showing:<br>-->
+						<hr>
+
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn active">
+								<input type="radio" name="graph-type" value="recipe" checked onchange="forceplot.updateVis()"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Recipes</span>
+							</label>
+							<label class="btn">
+								<input type="radio" name="graph-type" value="ingredient" onchange="forceplot.updateVis()"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-check-circle-o fa-2x"></i><span> Ingredients</span>
+							</label>
+						</div>
+
+						<div id="force-layout-filters">
+							<p></p></div>
+						<a type="button" class="btn btn-default force-button" onclick="forceplot.wrangleData('all')"><span class="glyphicon glyphicon-remove-circle"></span> &nbsp;&nbsp;Clear Filters</a>
+
+
+						<hr>
+					</div>
+					<div id="force-layout" style="display: table-cell"></div>
+
+				</div>
+
+
+			</div>
+
+
+
+	</div>
 
 	</div>
 
@@ -178,37 +243,13 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/d3.min.js"></script>
     <script src="js/queue.v1.min.js"></script>
-	<!--<script src="js/jquery.youtubepopup.js"></script>-->
-	<!--<script src="js/jquery.youtubepopup.min.js"></script>-->
+	<script src="js/main-force.js"></script>
+	<script src="js/forceDiagram.js"></script>
+	<script src="js/d3.tip.js"></script>
+	<script src="js/underscore-min.js"></script>
 
 
-<!-- Visualization objects -->
+	<script src="js/main.js"></script>
 
-<script src="js/main.js"></script>
-	<!--<script src="js/main_map.js"></script>-->
-
-<!--<script src="js/main-force.js"></script>-->
-<!--<script src="js/forceDiagram.js"></script>-->
-<!--<script src="js/main_barchart.js"></script>-->
-<!--<script src="js/barchart.js"></script>-->
-<!--<script src="js/main_barchart2.js"></script>-->
-<!--<script src="js/barchart2.js"></script>-->
-
-
-
-<!-- Load dataForceLayout, create visualizations -->
-<!-- Visualization objects -->
-<!--<script src="js/stackedAreaChart.js"></script>-->
-<!--<script src="js/timeline.js"></script>-->
-
-<!--&lt;!&ndash;- Decided not to add last viz as it does not fit to the story &ndash;&gt;-->
-<!--&lt;!&ndash;-<script src="js/Continent.js"></script>-->
-
-<!--&lt;!&ndash; Load data, create visualizations &ndash;&gt;-->
-<!--<script src="js/main_stacked2.js"></script>-->
-
-
-
-</div>
 </body>
 </html>

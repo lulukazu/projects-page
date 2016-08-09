@@ -62,6 +62,12 @@ function updateFiles(parentID,data,itemID) {
     //link data
     var parentEl=d3.select("#"+parentID);
 
+    var line=parentEl.append("div")
+        .attr("class","div-line")
+        .style("width","3px")
+        .style("height","100vh")
+        .style("background-color","#444")
+        .style("position","fixed");
 
     var nodes = parentEl.selectAll(".node")
         .data(data[itemID],function(d){return d.id;});
@@ -154,6 +160,25 @@ function updateFiles(parentID,data,itemID) {
                     modal.style.height='auto';
                     $('#myModal iframe').attr('src', src);
                     $('#myModal p').html(text);
+                    break;
+                case "recipes":
+                    modal_recipes.style.display = "block";
+                    modal_recipes.style.width='auto';
+                    modal_recipes.style.height='auto';
+                    queue().defer(d3.csv,"data/recipes_sampled.csv")
+                        .defer(d3.json,"data/categories.json")
+                        .await(createVisRecipes);
+                    break;
+                case "page":
+                    modal_page.style.display = "block";
+                    var container=document.getElementById("modal-container");
+                    var img = document.createElement("img");
+                    img.src=d.link;
+                    img.width=900;
+                    img.class="page-image";
+                    container.appendChild(img);
+
+                    break;
             }
 
         });
@@ -176,28 +201,37 @@ function updateFiles(parentID,data,itemID) {
     //modal javascript
 
 
+}
 
 
 // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementById("span2");
+var span3 = document.getElementById("span3");
+var modal = document.getElementById('myModal');
+var modal_page=document.getElementById('pageModal');
+var modal_recipes=document.getElementById('forceModal');
 //
-// When the user clicks on the button, open the modal
-//    btn.onclick = function() {
-//
-//    };
-
 // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        $('#myModal iframe').removeAttr('src')
-        modal.style.display = "none";
-    };
+span.onclick = function() {
+    $('#myModal iframe').removeAttr('src');
+    modal.style.display = "none";
+};
+
+span2.onclick=function(){
+    modal_recipes.style.display = "none";
+};
+
+span3.onclick=function(){
+    modal_page.style.display = "none";
+};
 
 // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-}
+window.onclick = function(event) {
+    if (event.target == modal  || event.target == modal_recipes || event.target==modal_page) {
+        modal.style.display = "none";
+        modal_recipes.style.display = "none";
+        modal_page.style.display="none";
+    }
+};
 

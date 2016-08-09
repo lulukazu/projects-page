@@ -11,11 +11,14 @@ body, a, div {
     top:0;
     bottom: 0;
     left: 58.33%;
-    border-left: 2px solid #999;
 }
 
 
+.h3 {
+    color:#698AAF;
+    font-size:1.3em;
 
+}
 
 
 
@@ -33,10 +36,6 @@ body, a, div {
     cursor: pointer;
 }
 
-
-.glyphicon {
-    padding-left:20px;
-}
 
 .nav-text {
     padding: 30px;
@@ -110,12 +109,12 @@ h2 {
     overflow-x: hidden;
     padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s;
-    height:750px;
+    height:100vh;
 }
 
 
 
-.glyphicon {
+.glyphicon-triangle-right {
     padding:0px;
     padding-top:7px;
     padding-right:5px;
@@ -134,6 +133,8 @@ h2 {
 .nav-item {
     padding:0px;
     position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
 
 }
 
@@ -156,9 +157,10 @@ h2 {
 }
 
 .item {
-    padding-top:20px;
-    padding-bottom:30px;
-    padding-right:10px;
+    padding-top:6%;
+    padding-bottom:6%;
+    padding-right:20px;
+    border-right: 4px solid #fff;
 }
 
 
@@ -170,10 +172,22 @@ h2 {
 #content-div{
     position:absolute;
     width:100%;
-    padding-top:20px;
+    padding-top:30px;
+    padding-bottom:20px;
     margin-left:20px;
+    margin-right:10px;
+    /*top: 50%;*/
+    /*transform: translate(0%,-50%);*/
+    height: auto !important;
 }
 
+#content-div-parent{
+    height:100vh;
+}
+
+.left-svg-div {
+
+}
 
 
 /*files*/
@@ -205,6 +219,8 @@ h2 {
 }
 .node {
     position:relative;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
     display:inline-flex;
 }
 
@@ -244,20 +260,23 @@ h2 {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(255,255,255,0.85); /* Black w/ opacity */
 }
+
+
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 100px auto; /* 15% from the top and centered */
+    background-color: transparent;
+    margin: 2% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width:65%;}
+    box-shadow:none;
+    border:none;
+    width:75%;}
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -271,6 +290,11 @@ h2 {
 }
 
 #video-text{
-    background-color: rgba(255,255,255,.7);
+background:transparent;
     padding:10px;
+    font-size: 1.2em;
+}
+
+.page-image{
+    width:100%;
 }
